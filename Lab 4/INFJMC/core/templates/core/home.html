@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{% static 'core/estilos.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido</h1>
+        <nav>
+            <a href="{% url 'home' %}">Inicio</a>
+            <a href="{% url 'carreras' %}">Carreras</a>
+            <a href="{% url 'docentes' %}">Docentes</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Inicio</h2>
+            <p>Bienvenido!</p>
+        </section>
+    </main>
