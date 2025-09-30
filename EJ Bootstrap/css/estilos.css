@@ -1,0 +1,15 @@
+body{
+    background-color: #D7F9FF;}
+
+.container-fluid{
+    background-color: #F9FBF2;}
+
+.row{
+    height: 33vh;
+    text-align: center;}
+
+#foot{
+    height: 34vh;}
+
+#cuatro,#seis{background-color: #D7F9FF;}
+#uno,#cinco:hover{background-color: #FFEDE1;}
