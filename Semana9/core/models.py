@@ -8,6 +8,7 @@ class Producto(models.Model):
     stock = models.IntegerField(min=0)
 
 class Proveedor(models.Model):
-   producto = models.ForeignKey(Producto) 
+   producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
+   
    
    
