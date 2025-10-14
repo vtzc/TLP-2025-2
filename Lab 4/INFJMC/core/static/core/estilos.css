@@ -9,3 +9,7 @@ body{
     line-height: 1.6;
     font-size: 18px;
 }
+
+h1, h2, h3{
+    color: #444;
+}
