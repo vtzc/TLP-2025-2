@@ -1,14 +1,25 @@
 from django.shortcuts import render, HttpResponse
 from .models import Contacto
+import requests
 
 def home(request):
+
+    url_api =  "https://api.gael.cloud/general/public/clima/SCVM"
+    conexion_api = requests.get(url_api)
+    datos_api = conexion_api.json()
+    
+    dpa_api = "https://apis.modernizacion.cl/dpa/regiones"
+    conexion_dpa = requests.get(dpa_api)
+    datos_dpa = conexion_dpa.json()
+
     titulo = "Inicio"
 
     productos = ['computadores','periféricos','servidores']
     
     data = {
         "titulo": titulo,
-        "productos":productos
+        "productos":productos,
+        "clima": datos_api,
     }
      
     #return HttpResponse(titulo)

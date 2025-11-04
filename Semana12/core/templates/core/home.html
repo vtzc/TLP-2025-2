@@ -10,7 +10,14 @@
 </head>
 
 <body>
+
+
     <h1>{{ titulo }}</h1>
+    <hr>
+    Hoy en Viña del Mar: {{ clima.Descripcion }} con una temperatura de {{ clima.Temperatura }} °C<br>
+    Humedad: {{ clima.Humedad }} %<br>
+    Viento: {{ clima.Viento }} km/h<br>
+    Fecha y hora: {{ clima.Fecha }}<br>
     <hr>
     {% include 'core/nav.html' %}
 
