@@ -5,7 +5,7 @@ class Proveedor(models.Model):
     nombre = models.CharField(max_length=50)
     
     class Meta:
-        verbose_name_plural = "Proovedores"
+        verbose_name_plural = "Provedores"
 
 class Producto(models.Model):
     codigo = models.CharField(max_length=6,primary_key=True)
@@ -13,11 +13,12 @@ class Producto(models.Model):
     precio = models.IntegerField()
     stock = models.IntegerField()
     proveedor = models.ForeignKey(Proveedor,models.SET_NULL, null=True)
-    
+
 class Contacto(models.Model):
     nombre = models.CharField(max_length=50)
     email = models.EmailField()
     mensaje = models.TextField()
-    
+
     def __str__(self):
-        return self.nombre + " - " + self.mensaje
+        return self.nombre +" - " + self.mensaje
+

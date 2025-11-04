@@ -14,19 +14,13 @@
     <hr>
     {% include 'core/nav.html' %}
     <hr>
-    <form action="" method="POST">
+    <form action="{% url 'contacto' %}" method="POST">
         {% csrf_token %}
-        <label for="nombre">Nombre:</label>
-        <input name="nombre" required><br><br>
-
-        <label for="email">Email:</label>
-        <input name="email" required><br><br>
-
-        <label for="mensaje">Mensaje:</label><br>
-        <textarea name="mensaje" required></textarea><br><br>
-
-        <button type="submit"> Enviar </button>
-       
+        <label>Nombre</label><input type="text" name="txtNombre"><br>
+        <label>Email</label><input type="email" name="txtEmail"><br>
+        <label>Mensaje</label><textarea name="txtMensaje"></textarea><br>
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 
 </html>
