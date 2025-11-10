@@ -7,10 +7,6 @@ def home(request):
     url_api =  "https://api.gael.cloud/general/public/clima/SCVM"
     conexion_api = requests.get(url_api)
     datos_api = conexion_api.json()
-    
-    dpa_api = "https://apis.modernizacion.cl/dpa/regiones"
-    conexion_dpa = requests.get(dpa_api)
-    datos_dpa = conexion_dpa.json()
 
     titulo = "Inicio"
 
